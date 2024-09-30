@@ -1,4 +1,6 @@
+#pragma once
 #include <grrlib.h>
+#include "BMfont5_png.h"
 
 class ConsoleLine {
 public:
@@ -9,8 +11,11 @@ public:
 
 class Console {
 public:
-    void init(GRRLIB_texImg consoleFont);
-    GRRLIB_texImg consoleFont;
+    void init();
+    
     void draw();
-    void print(char* msg);
+    void print(float x, float y, u32 colorRGBA, char* msg);
+    GRRLIB_texImg* fontTex;
 };
+
+extern Console console;

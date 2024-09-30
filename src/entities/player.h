@@ -9,7 +9,7 @@ public:
     float velX, velY;
     float speed = 7;
     float rotation;
-    GRRLIB_texImg texture;
+    GRRLIB_texImg* texture;
 
     void init();
     void draw();
